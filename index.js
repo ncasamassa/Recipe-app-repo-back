@@ -32,7 +32,7 @@ server.post("/create", (req, res) => {
     const fourth = req.body.name;
 
     db.query(
-        "INSERT INTO placeholder (street_address, bedrooms, bathrooms, photo) VALUES (?,?,?,?)",
+        "INSERT INTO placeholder (first, second, third, fourth) VALUES (?,?,?,?)",
         [first, second, third, fourth],
         (err, result) => {
           if (err) {
